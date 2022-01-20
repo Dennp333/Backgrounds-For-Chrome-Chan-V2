@@ -1,24 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  // overall solution was to set height of div to 100vh. Now background and image strategies both work
+  let num = Math.floor(Math.random()*104)+1
+  let url = "Wallpapers/" + num + ".jpg";
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <img src={url}></img>
     </div>
+  //return (
+  //  <div style={{backgroundImage: `url("Wallpapers/${num}.jpg")`}}>
+  //  </div>
   );
 }
 
