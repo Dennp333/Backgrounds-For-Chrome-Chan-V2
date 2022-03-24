@@ -30,7 +30,7 @@ function App() {
   //   </div>
   return (
    <div id = "page" style={{backgroundImage: `url(${url})`}}>
-     <Menu />
+     <Menu active = {active}/>
    </div>
   );
 }
