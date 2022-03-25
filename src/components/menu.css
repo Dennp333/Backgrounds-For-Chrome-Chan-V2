@@ -1,5 +1,6 @@
 #menu {
     height: 90%;
     width: 75%;
+    min-width: 800px;
     background-color: white;
 }

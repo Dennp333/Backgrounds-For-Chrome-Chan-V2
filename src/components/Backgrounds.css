@@ -1,4 +1,20 @@
 .option {
-    height: 30px;
-    width: 30px;
+    height: 23%;
+    width: 23%;
+    margin: 1.5% 1%;
+}
+
+.option > img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 8%;
+}
+
+#backgrounds {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    height: 100%;
 }
