@@ -1,14 +1,20 @@
 import React from 'react'
 import './Backgrounds.css'
+import Image from './Image'
 
-const Backgrounds = ({backgroundDict}) => {
+const Backgrounds = ({backgroundDict, setStatus}) => {
+
+    const toggleActive = (url) => {
+        return () => {
+            setStatus({...backgroundDict, [url] : !backgroundDict[url]})
+        }
+    }
+
     return (
         <div id = "backgrounds">
             {Object.keys(backgroundDict).map(url => {
                 return (
-                    <div key = {url} className = 'option'>
-                        <img src = {url} alt = ''></img>
-                    </div>
+                    <Image key = {url} url = {url} isActive = {backgroundDict[url]} toggleActive = {toggleActive}/>
                 )
             })}
         </div>

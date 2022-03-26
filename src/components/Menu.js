@@ -21,7 +21,7 @@ const Menu = () => {
 
     return (
         <div id = "menu">
-            <Backgrounds backgroundDict = {status} />
+            <Backgrounds backgroundDict = {status} setStatus = {setStatus}/>
         </div>
     )
 }
