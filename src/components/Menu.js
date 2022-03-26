@@ -2,15 +2,26 @@ import {useState, useEffect} from 'react'
 import './menu.css'
 import Backgrounds from './Backgrounds'
 
-const Menu = ({active}) => {
-    const activeDict = {}
-    for (let i = 0; i < 104; ++i){
-        activeDict[`Wallpapers/${i}.jpg`] = false
-    }
-    active.forEach(n => activeDict[`Wallpapers/${n}.jpg`] = true)
+const Menu = () => {
+    const [status, setStatus] = useState({})
+
+    useEffect(() => {
+        const storedStatus = window.localStorage.getItem('status')
+        let statusDict = {}
+        if (!storedStatus) {
+            for (let i = 0; i < 104; ++i) {
+                statusDict[`Wallpapers/${i}.jpg`] = true
+            }
+            window.localStorage.setItem('status', JSON.stringify(statusDict))
+        } else {
+            statusDict = JSON.parse(storedStatus)
+        }
+        setStatus(statusDict)
+    }, [])
+
     return (
         <div id = "menu">
-            <Backgrounds backgroundDict = {activeDict} />
+            <Backgrounds backgroundDict = {status} />
         </div>
     )
 }
