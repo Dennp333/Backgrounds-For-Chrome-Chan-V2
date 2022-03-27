@@ -1,8 +1,9 @@
 import {useState, useEffect} from 'react'
 import './menu.css'
 import Backgrounds from './Backgrounds'
+import Buttons from './Buttons'
 
-const Menu = () => {
+const Menu = ({closeMenu}) => {
     const [status, setStatus] = useState({})
 
     useEffect(() => {
@@ -19,9 +20,21 @@ const Menu = () => {
         setStatus(statusDict)
     }, [])
 
+    const done = () => {
+        const active = Object.keys(status).filter(url => status[url])
+        window.localStorage.setItem('active', active.join(' '))
+        window.localStorage.setItem('status', JSON.stringify(status))
+        closeMenu()
+    }
+
+    const cancel = () => {
+        closeMenu()
+    }
+
     return (
         <div id = "menu">
             <Backgrounds backgroundDict = {status} setStatus = {setStatus}/>
+            <Buttons done = {done} cancel = {cancel} />
         </div>
     )
 }

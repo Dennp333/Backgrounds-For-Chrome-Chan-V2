@@ -3,5 +3,5 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     overflow-y: scroll;
-    height: 100%;
+    flex-grow: 1;
 }

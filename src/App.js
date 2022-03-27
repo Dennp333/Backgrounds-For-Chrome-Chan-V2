@@ -3,7 +3,7 @@ import './App.css';
 import Menu from './components/Menu'
 
 function App() {
-  const [menuOpen, setMenuOpen] = useState(true)
+  const [menuOpen, setMenuOpen] = useState(false)
   const [currentBackground, setCurrrentBackground] = useState('')
 
   useEffect(() => {
@@ -21,9 +21,20 @@ function App() {
     setCurrrentBackground(`"${activeList[index]}"`)
   }, [])
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen)
+  }
+
+  const handleConfigure = () => {
+    return menuOpen 
+    ? () => {}
+    : toggleMenu
+  }
+
   return (
    <div id = "page" style={{backgroundImage: `url(${currentBackground})`}}>
-     {menuOpen && <Menu />}
+     {menuOpen && <Menu closeMenu = {toggleMenu}/>}
+     <button onClick = {handleConfigure()}>Configure</button>
    </div>
   );
 }
