@@ -1,0 +1,20 @@
+#chooseTab {
+    display: flex;
+    justify-content: flex-start;
+    background-color: lightgray;
+    font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
+    font-size: 1.2em;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+#chooseTab > div {
+    width: 19.1%;
+    text-align: center;
+    padding: 8px 0px;
+}
+
+#chooseTab > div:hover {
+    color: rgb(66, 133, 244);
+    cursor: pointer;
+}

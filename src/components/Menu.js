@@ -1,10 +1,12 @@
 import {useState, useEffect} from 'react'
-import './menu.css'
+import './Menu.css'
 import Backgrounds from './Backgrounds'
 import Buttons from './Buttons'
+import ChooseTab from './ChooseTab'
 
 const Menu = ({closeMenu}) => {
     const [status, setStatus] = useState({})
+    const [selectTabOpen, setSelectTabOpen] = useState(true)
 
     useEffect(() => {
         const storedStatus = window.localStorage.getItem('status')
@@ -33,7 +35,8 @@ const Menu = ({closeMenu}) => {
 
     return (
         <div id = "menu">
-            <Backgrounds backgroundDict = {status} setStatus = {setStatus}/>
+            <ChooseTab selectTabOpen = {selectTabOpen} setSelectTabOpen = {setSelectTabOpen} />
+            {selectTabOpen && <Backgrounds backgroundDict = {status} setStatus = {setStatus} />}
             <Buttons done = {done} cancel = {cancel} />
         </div>
     )
