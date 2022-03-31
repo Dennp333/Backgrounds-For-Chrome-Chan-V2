@@ -1,0 +1,48 @@
+#addPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+#addButton {
+    padding: 6px 12px;
+    border-radius: 3px;
+    font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
+    font-size: 81.25%;
+    font-weight: 500;
+    cursor: pointer;
+    color: white;
+    background-color:rgba(26, 115, 232, 0.9);
+    margin: 16px 8px;
+}
+
+#addButton:hover {
+    background-color: rgb(66, 133, 244);
+}
+
+#addForm {
+    width: 100%;
+    text-align: center;
+}
+
+#search {
+    border: 1px solid rgb(223,225,229);
+    border-radius: 16px;
+    padding: 6px 24px;
+    width: 45%;
+    outline: none;
+  }
+
+#imageContainer {
+    flex-grow: 1;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+#newImage {
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+}

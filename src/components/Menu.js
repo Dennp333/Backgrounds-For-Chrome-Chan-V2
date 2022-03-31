@@ -3,6 +3,7 @@ import './Menu.css'
 import Backgrounds from './Backgrounds'
 import Buttons from './Buttons'
 import ChooseTab from './ChooseTab'
+import AddNew from './AddNew'
 
 const Menu = ({closeMenu}) => {
     const [status, setStatus] = useState({})
@@ -33,10 +34,15 @@ const Menu = ({closeMenu}) => {
         closeMenu()
     }
 
+    const addWallpaper = (url) => {
+        setStatus({...status, [url]: true})
+    }
+
     return (
         <div id = "menu">
             <ChooseTab selectTabOpen = {selectTabOpen} setSelectTabOpen = {setSelectTabOpen} />
             {selectTabOpen && <Backgrounds backgroundDict = {status} setStatus = {setStatus} />}
+            {!selectTabOpen && <AddNew addWallpaper = {addWallpaper} />}
             <Buttons done = {done} cancel = {cancel} />
         </div>
     )
