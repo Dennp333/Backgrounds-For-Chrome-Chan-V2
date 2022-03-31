@@ -3,15 +3,24 @@ import './AddNew.css'
 
 const AddNew = ({addWallpaper}) => {
     const [url, setUrl] = useState('')
+    const [isValid, setIsValid] = useState(false)
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        addWallpaper(url)
-        setUrl('')
+        if (isValid) {
+            addWallpaper(url)
+            setUrl('')
+        }
     }
 
     const handleChange = (event) => {
         setUrl(event.target.value)
+        setIsValid(true)
+    }
+
+    const handleImageInvalid = (event) => {
+        event.target.onError = null
+        setIsValid(false)
     }
 
     return (
@@ -21,7 +30,7 @@ const AddNew = ({addWallpaper}) => {
                 <button type='submit' id = "addButton">Add</button>
             </form>
             <div id = "imageContainer">
-                <img src = {url} alt = 'Image not found' id = "newImage"/>
+                <img src = {url} onError = {handleImageInvalid} alt = 'Image not found' id = "newImage"/>
             </div>
         </div>
     )
