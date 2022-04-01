@@ -34,7 +34,7 @@ function App() {
   return (
    <div id = "page" style={{backgroundImage: `url(${currentBackground})`}}>
      {menuOpen && <Menu closeMenu = {toggleMenu}/>}
-     <button onClick = {handleConfigure()}>Configure</button>
+     <div onClick = {handleConfigure()} id = 'customize'><img src = 'Icons/gear.png' alt = ''/></div>
    </div>
   );
 }

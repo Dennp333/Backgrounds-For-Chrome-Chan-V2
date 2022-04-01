@@ -12,7 +12,6 @@ button {
     padding: 8px 16px;
     border-radius: 4px;
     font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
-    font-size: 81.25%;
     min-width: 5.14em;
     font-weight: 500;
     cursor: pointer;
@@ -33,4 +32,25 @@ button.enter {
 
 button.enter:hover {
     background-color: rgb(66, 133, 244);
+}
+
+#customize {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+#customize:hover {
+    background-color: #5f6368;
+}
+
+#customize > img {
+    height: 28px;
+    width: 28px;
 }
