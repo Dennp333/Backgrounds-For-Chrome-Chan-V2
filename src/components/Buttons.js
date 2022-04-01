@@ -10,7 +10,7 @@ const Buttons = ({done, cancel, setAllStatus}) => {
             </div>
             <div id = 'submit'>
                 <button class = 'other' onClick = {cancel}>Cancel</button>
-                <button id = 'done' onClick = {done}>Done</button>
+                <button class = 'enter' onClick = {done}>Done</button>
             </div>
         </div>
     )

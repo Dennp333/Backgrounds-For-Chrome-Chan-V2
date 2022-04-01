@@ -9,17 +9,8 @@
 #addButton {
     padding: 6px 12px;
     border-radius: 3px;
-    font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
-    font-size: 81.25%;
-    font-weight: 500;
-    cursor: pointer;
-    color: white;
-    background-color:rgba(26, 115, 232, 0.9);
     margin: 16px 8px;
-}
-
-#addButton:hover {
-    background-color: rgb(66, 133, 244);
+    min-width: 0;
 }
 
 #addForm {

@@ -27,7 +27,7 @@ const AddNew = ({addWallpaper}) => {
         <div id = "addPage">
             <form onSubmit = {handleSubmit} id = "addForm">
                 <input placeholder='Enter image url' value = {url} onChange = {handleChange} id = "search"></input>
-                <button type='submit' id = "addButton">Add</button>
+                <button type = 'submit' id = 'addButton' class = 'enter'>Add</button>
             </form>
             <div id = "imageContainer">
                 <img src = {url} onError = {handleImageInvalid} alt = 'Image not found' id = "newImage"/>
