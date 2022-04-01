@@ -1,10 +1,10 @@
 #buttons {
-    margin-left: auto;
     margin-top: auto;
     padding: 16px;
+    display: flex;
 }
 
-#buttons > button {
+#buttons > div > button {
     padding: 8px 16px;
     border-radius: 4px;
     font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
@@ -14,14 +14,18 @@
     cursor: pointer;
 }
 
-#cancel {
+#submit {
+    margin-left: auto;
+}
+
+.other {
     margin-right: 8px;
     border: 1px solid rgb(218 220 224);
     color: rgb(26, 115, 232);
     background-color: white;
 }
 
-#cancel:hover {
+.other:hover {
     background-color: rgba(66, 133, 244, 0.04);
 }
 

@@ -1,7 +1,7 @@
 #chooseTab {
     display: flex;
     justify-content: flex-start;
-    background-color: lightgray;
+    background-color: rgb(225, 225, 230);
     font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
     font-size: 1.2em;
     border-top-left-radius: 8px;

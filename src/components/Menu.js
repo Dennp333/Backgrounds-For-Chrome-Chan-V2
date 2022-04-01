@@ -34,6 +34,14 @@ const Menu = ({closeMenu}) => {
         closeMenu()
     }
 
+    const setAllStatus = (value) => {
+        const newStatus = {...status}
+        for (let url in newStatus) {
+            newStatus[url] = value;
+        }
+        setStatus(newStatus)
+    }
+
     const addWallpaper = (url) => {
         setStatus({...status, [url]: true})
     }
@@ -43,7 +51,7 @@ const Menu = ({closeMenu}) => {
             <ChooseTab selectTabOpen = {selectTabOpen} setSelectTabOpen = {setSelectTabOpen} />
             {selectTabOpen && <Backgrounds backgroundDict = {status} setStatus = {setStatus} />}
             {!selectTabOpen && <AddNew addWallpaper = {addWallpaper} />}
-            <Buttons done = {done} cancel = {cancel} />
+            <Buttons done = {done} cancel = {cancel} setAllStatus = {setAllStatus} />
         </div>
     )
 }
