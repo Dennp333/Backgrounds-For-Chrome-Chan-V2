@@ -42,11 +42,8 @@ button.enter:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 8px;
+    padding: 6px;
     border-radius: 50%;
-}
-
-#customize:hover {
     background-color: #5f6368;
 }
 
