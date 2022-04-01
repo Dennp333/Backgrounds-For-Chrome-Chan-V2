@@ -13,7 +13,7 @@ const Menu = ({closeMenu}) => {
         const storedStatus = window.localStorage.getItem('status')
         let statusDict = {}
         if (!storedStatus) {
-            for (let i = 0; i < 104; ++i) {
+            for (let i = 0; i < 100; ++i) {
                 statusDict[`Wallpapers/${i}.jpg`] = true
             }
             window.localStorage.setItem('status', JSON.stringify(statusDict))

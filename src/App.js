@@ -12,7 +12,7 @@ function App() {
     if (storedActive){
       activeList = storedActive.split(' ')
     } else {
-      for (let i = 0; i < 104; ++i){
+      for (let i = 0; i < 100; ++i){
         activeList.push(`Wallpapers/${i}.jpg`)
       }
       window.localStorage.setItem('active', activeList.join(' '))

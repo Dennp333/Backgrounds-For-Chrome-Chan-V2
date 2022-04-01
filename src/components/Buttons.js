@@ -5,12 +5,12 @@ const Buttons = ({done, cancel, setAllStatus}) => {
     return (
         <div id = 'buttons'>
             <div>
-                <button class = 'other' onClick = {() => setAllStatus(true)}>Activate All</button>
-                <button class = 'other' onClick = {() => setAllStatus(false)}>Deactive All</button>
+                <button className = 'other' onClick = {() => setAllStatus(true)}>Activate All</button>
+                <button className = 'other' onClick = {() => setAllStatus(false)}>Deactive All</button>
             </div>
             <div id = 'submit'>
-                <button class = 'other' onClick = {cancel}>Cancel</button>
-                <button class = 'enter' onClick = {done}>Done</button>
+                <button className = 'other' onClick = {cancel}>Cancel</button>
+                <button className = 'enter' onClick = {done}>Done</button>
             </div>
         </div>
     )
